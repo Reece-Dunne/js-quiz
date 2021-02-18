@@ -3,12 +3,15 @@ exports.questionOne = () => {
 
   //tests below
   console.log(answerOne("I am hungry!")); //expected result: !yrgnuh ma I
-  console.log(answerOne("reward!")); //expected result: drawer
-  console.log(answerOne("Ramen")); //nemaR
-  console.log(answerOne("robot")); //tobor
+  console.log(answerOne("reward!")); //expected result: drawer!
+  console.log(answerOne("Ramen")); //expected result: nemaR
+  console.log(answerOne("robot")); //expected result: tobor
 }
 
 const answerOne = (str) => {
-  //code here
-  
+  var splitStr = str.split('');
+  var reverseArr = splitStr.reverse();
+  var joinArr = reverseArr.join('');
+  return joinArr
 }
+
