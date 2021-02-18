@@ -10,6 +10,6 @@ exports.questionTwo = () => {
 }
 
 const answerTwo = (str) => {
-  //code here
-  
+  var m = str.match(/[aeiou]/gi);
+  return m === null ? 0 : m.length;
 }
