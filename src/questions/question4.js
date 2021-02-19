@@ -30,6 +30,19 @@ exports.questionFour = () => {
 }
 
 class HighScores {
-  //code here
-
+  constructor(scores) {
+    this.scores = scores;
+  }
+  get orderedScoreDesc() {
+    return this.scores.sort((a, b) => b - a);
+  }
+  get latest() {
+    return this.scores[this.scores.length - 1];
+  }
+  get personalBest() {
+    return this.orderedScoreDesc[0];
+  }
+  get personalTopThree() {
+    return this.orderedScoreDesc.slice(0, 3);
+  }
 }
