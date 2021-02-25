@@ -11,6 +11,15 @@ exports.questionFive = () => {
 const answerFive = () => {
   const url = "https://europe-west2-dpduk-t-insight-l1.cloudfunctions.net/employees";
 
-  //code here
+  axios.get(url).then(employees => {
+    let employeesList = employees.data;
+    let filterData = employeesList.filter(d => { 
+      return getEmployeeDateOfBirth(d.dateOfBirth) >= 50
+    })
+    console.log(filterData)
+  })   
+}
 
+const getEmployeeDateOfBirth = (dob) => {
+  return Math.floor((new Date() - new Date(dob).getTime()) / 3.15576e+10);
 }
