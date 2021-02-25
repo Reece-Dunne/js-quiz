@@ -27,6 +27,9 @@ exports.questionFour = () => {
   const top3Input2 = [40, 20, 40, 30];
   const top3Result2 = new HighScores(top3Input2).personalTopThree; //expected result: [40, 40, 30]
   console.log(top3Result2);
+  let number = [30, 40, 50, 60, 70];
+  console.log(number.length)
+  console.log(number[5])
 }
 
 class HighScores {

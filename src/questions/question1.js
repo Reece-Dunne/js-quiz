@@ -14,4 +14,3 @@ const answerOne = (str) => {
   var joinArr = reverseArr.join('');
   return joinArr
 }
-
